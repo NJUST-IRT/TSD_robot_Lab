@@ -100,7 +100,7 @@
       lower="-0.61087"
       upper="0.43633"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="FR_thigh">
@@ -158,7 +158,7 @@
       lower="-2.4435"
       upper="2.4435"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="FR_calf">
@@ -216,7 +216,7 @@
       lower="-2.7576"
       upper="2.5831"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="FR_wheel">
@@ -271,10 +271,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="0.0"
-      upper="0.0"
       effort="38.0"
-      velocity="590.0" />
+      velocity="61.784655520599266" />
   </joint>
   <link
     name="FL_hip">
@@ -332,7 +330,7 @@
       lower="-0.61087"
       upper="0.43633"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="FL_thigh">
@@ -390,7 +388,7 @@
       lower="-2.4435"
       upper="2.4435"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="FL_calf">
@@ -448,7 +446,7 @@
       lower="-2.7576"
       upper="2.5831"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="FL_wheel">
@@ -503,10 +501,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0.0"
-      upper="0.0"
       effort="38.0"
-      velocity="590.0" />
+      velocity="61.784655520599266" />
   </joint>
   <link
     name="RR_hip">
@@ -564,7 +560,7 @@
       lower="-0.61087"
       upper="0.43633"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="RR_thigh">
@@ -622,7 +618,7 @@
       lower="-2.4435"
       upper="2.4435"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="RR_calf">
@@ -680,7 +676,7 @@
       lower="-2.7576"
       upper="2.5831"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="RR_wheel">
@@ -735,10 +731,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="0.0"
-      upper="0.0"
       effort="38.0"
-      velocity="590.0" />
+      velocity="61.784655520599266" />
   </joint>
   <link
     name="RL_hip">
@@ -796,7 +790,7 @@
       lower="-0.61087"
       upper="0.43633"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="RL_thigh">
@@ -854,7 +848,7 @@
       lower="-2.4435"
       upper="2.4435"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="RL_calf">
@@ -912,7 +906,7 @@
       lower="-2.7576"
       upper="2.5831"
       effort="170.0"
-      velocity="180.0" />
+      velocity="18.84955592153876" />
   </joint>
   <link
     name="RL_wheel">
@@ -967,9 +961,7 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0.0"
-      upper="0.0"
       effort="38"
-      velocity="590.0" />
+      velocity="61.784655520599266" />
   </joint>
 </robot>
