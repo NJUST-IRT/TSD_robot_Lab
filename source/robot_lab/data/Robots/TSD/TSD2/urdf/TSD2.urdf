@@ -738,17 +738,17 @@
     name="RL_hip">
     <inertial>
       <origin
-        xyz="0 0 0"
+        xyz="0.018413 0.015515 -4.3808E-05"
         rpy="0 0 0" />
       <mass
-        value="0" />
+        value="0.88356" />
       <inertia
-        ixx="0"
-        ixy="0"
-        ixz="0"
-        iyy="0"
-        iyz="0"
-        izz="0" />
+        ixx="0.0011036"
+        ixy="3.4473E-05"
+        ixz="8.2027E-06"
+        iyy="0.0009948"
+        iyz="1.0567E-06"
+        izz="0.0010646" />
     </inertial>
     <visual>
       <origin
