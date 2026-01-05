@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="TSD2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0097424 -0.0020463 0.0075147"
+        rpy="0 0 0" />
+      <mass
+        value="16.936" />
+      <inertia
+        ixx="0.11576"
+        ixy="-3.2988E-05"
+        ixz="-8.0592E-05"
+        iyy="0.21279"
+        iyz="0.00086584"
+        izz="0.28589" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR_hip">
+    <inertial>
+      <origin
+        xyz="-0.018413 -0.015515 -4.3806E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.88356" />
+      <inertia
+        ixx="0.0011036"
+        ixy="3.4473E-05"
+        ixz="-8.2027E-06"
+        iyy="0.0009948"
+        iyz="-1.0567E-06"
+        izz="0.0010646" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.2645 -0.08 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR_hip" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.61087"
+      upper="0.43633"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="FR_thigh">
+    <inertial>
+      <origin
+        xyz="7.1897E-05 0.031182 -0.036888"
+        rpy="0 0 0" />
+      <mass
+        value="1.045" />
+      <inertia
+        ixx="0.0031189"
+        ixy="-3.0345E-06"
+        ixz="6.3626E-08"
+        iyy="0.003432"
+        iyz="9.0075E-05"
+        izz="0.0010016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0.024 -0.1595 0"
+      rpy="0 0 0" />
+    <parent
+      link="FR_hip" />
+    <child
+      link="FR_thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.4435"
+      upper="2.4435"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="FR_calf">
+    <inertial>
+      <origin
+        xyz="5.0388E-05 -0.029836 -0.039201"
+        rpy="0 0 0" />
+      <mass
+        value="1.1494" />
+      <inertia
+        ixx="0.0046656"
+        ixy="2.1535E-06"
+        ixz="2.9501E-08"
+        iyy="0.0050461"
+        iyz="-0.00018824"
+        izz="0.00096954" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.87451 0.87451 0.87451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0714 -0.225"
+      rpy="0 0 0" />
+    <parent
+      link="FR_thigh" />
+    <child
+      link="FR_calf" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.7576"
+      upper="2.5831"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="FR_wheel">
+    <inertial>
+      <origin
+        xyz="-0.00012611 0.01836 0.0014127"
+        rpy="0 0 0" />
+      <mass
+        value="1.3002" />
+      <inertia
+        ixx="0.0031112"
+        ixy="4.8903E-06"
+        ixz="-1.6644E-06"
+        iyy="0.0052714"
+        iyz="-3.468E-05"
+        izz="0.0030472" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FR_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0954 -0.272"
+      rpy="0 0 0" />
+    <parent
+      link="FR_calf" />
+    <child
+      link="FR_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0.0"
+      upper="0.0"
+      effort="38.0"
+      velocity="590.0" />
+  </joint>
+  <link
+    name="FL_hip">
+    <inertial>
+      <origin
+        xyz="-0.018413 0.015452 7.9478E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.88356" />
+      <inertia
+        ixx="0.0011036"
+        ixy="-3.6178E-05"
+        ixz="7.0479E-06"
+        iyy="0.0009945"
+        iyz="-6.2926E-07"
+        izz="0.0010649" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.2645 0.08 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL_hip" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.61087"
+      upper="0.43633"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="FL_thigh">
+    <inertial>
+      <origin
+        xyz="7.1708E-05 -0.031182 -0.036877"
+        rpy="0 0 0" />
+      <mass
+        value="1.045" />
+      <inertia
+        ixx="0.0031189"
+        ixy="3.0351E-06"
+        ixz="-6.3626E-08"
+        iyy="0.003432"
+        iyz="-8.966E-05"
+        izz="0.0010016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0.024 0.1595 0"
+      rpy="0 0 0" />
+    <parent
+      link="FL_hip" />
+    <child
+      link="FL_thigh" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.4435"
+      upper="2.4435"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="FL_calf">
+    <inertial>
+      <origin
+        xyz="-5.0387E-05 0.029836 -0.039201"
+        rpy="0 0 0" />
+      <mass
+        value="1.1494" />
+      <inertia
+        ixx="0.0046656"
+        ixy="2.1536E-06"
+        ixz="-2.9499E-08"
+        iyy="0.0050461"
+        iyz="0.00018824"
+        izz="0.00096954" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.16863 0.16863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0714 -0.225"
+      rpy="0 0 0" />
+    <parent
+      link="FL_thigh" />
+    <child
+      link="FL_calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.7576"
+      upper="2.5831"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="FL_wheel">
+    <inertial>
+      <origin
+        xyz="0.00012611 -0.01836 0.0014127"
+        rpy="0 0 0" />
+      <mass
+        value="1.3002" />
+      <inertia
+        ixx="0.0031112"
+        ixy="4.8903E-06"
+        ixz="1.6644E-06"
+        iyy="0.0052714"
+        iyz="3.468E-05"
+        izz="0.0030472" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/FL_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0954 -0.272"
+      rpy="0 0 0" />
+    <parent
+      link="FL_calf" />
+    <child
+      link="FL_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.0"
+      upper="0.0"
+      effort="38.0"
+      velocity="590.0" />
+  </joint>
+  <link
+    name="RR_hip">
+    <inertial>
+      <origin
+        xyz="0.018413 -0.015452 7.9454E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.88356" />
+      <inertia
+        ixx="0.0011036"
+        ixy="-3.6178E-05"
+        ixz="-7.048E-06"
+        iyy="0.0009945"
+        iyz="6.2924E-07"
+        izz="0.0010649" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.2645 -0.08 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_hip" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.61087"
+      upper="0.43633"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="RR_thigh">
+    <inertial>
+      <origin
+        xyz="-7.1708E-05 0.031182 -0.036877"
+        rpy="0 0 0" />
+      <mass
+        value="1.045" />
+      <inertia
+        ixx="0.0031189"
+        ixy="3.0351E-06"
+        ixz="6.3626E-08"
+        iyy="0.003432"
+        iyz="8.966E-05"
+        izz="0.0010016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="-0.024 -0.1595 0"
+      rpy="0 0 0" />
+    <parent
+      link="RR_hip" />
+    <child
+      link="RR_thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.4435"
+      upper="2.4435"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="RR_calf">
+    <inertial>
+      <origin
+        xyz="5.2434E-05 -0.03101 -0.035344"
+        rpy="0 0 0" />
+      <mass
+        value="1.1046" />
+      <inertia
+        ixx="0.0045588"
+        ixy="2.1535E-06"
+        ixz="2.9545E-08"
+        iyy="0.004933"
+        iyz="-0.00018827"
+        izz="0.00096299" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.039216 0.4902 0.7098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0714 -0.225"
+      rpy="0 0 0" />
+    <parent
+      link="RR_thigh" />
+    <child
+      link="RR_calf" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.7576"
+      upper="2.5831"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="RR_wheel">
+    <inertial>
+      <origin
+        xyz="-0.00012611 0.01836 0.0014127"
+        rpy="0 0 0" />
+      <mass
+        value="1.3002" />
+      <inertia
+        ixx="0.0031112"
+        ixy="4.8903E-06"
+        ixz="-1.6644E-06"
+        iyy="0.0052714"
+        iyz="-3.468E-05"
+        izz="0.0030472" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RR_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0954 -0.272"
+      rpy="0 0 0" />
+    <parent
+      link="RR_calf" />
+    <child
+      link="RR_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0.0"
+      upper="0.0"
+      effort="38.0"
+      velocity="590.0" />
+  </joint>
+  <link
+    name="RL_hip">
+    <inertial>
+      <origin
+        xyz="0.018413 0.015515 -4.3808E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.88356" />
+      <inertia
+        ixx="0.0011036"
+        ixy="3.4473E-05"
+        ixz="8.2027E-06"
+        iyy="0.0009948"
+        iyz="1.0567E-06"
+        izz="0.0010646" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.2645 0.08 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RL_hip" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.61087"
+      upper="0.43633"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="RL_thigh">
+    <inertial>
+      <origin
+        xyz="-7.1897E-05 -0.031182 -0.036888"
+        rpy="0 0 0" />
+      <mass
+        value="1.045" />
+      <inertia
+        ixx="0.0031189"
+        ixy="-3.0345E-06"
+        ixz="-6.3626E-08"
+        iyy="0.003432"
+        iyz="-9.0075E-05"
+        izz="0.0010016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="-0.024 0.1595 0"
+      rpy="0 0 0" />
+    <parent
+      link="RL_hip" />
+    <child
+      link="RL_thigh" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.4435"
+      upper="2.4435"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="RL_calf">
+    <inertial>
+      <origin
+        xyz="-5.0388E-05 0.029836 -0.039201"
+        rpy="0 0 0" />
+      <mass
+        value="1.1494" />
+      <inertia
+        ixx="0.0046656"
+        ixy="2.1535E-06"
+        ixz="-2.95E-08"
+        iyy="0.0050461"
+        iyz="0.00018824"
+        izz="0.00096954" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.039216 0.4902 0.7098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0714 -0.225"
+      rpy="0 0 0" />
+    <parent
+      link="RL_thigh" />
+    <child
+      link="RL_calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.7576"
+      upper="2.5831"
+      effort="170.0"
+      velocity="180.0" />
+  </joint>
+  <link
+    name="RL_wheel">
+    <inertial>
+      <origin
+        xyz="0.00012611 -0.01836 0.0014127"
+        rpy="0 0 0" />
+      <mass
+        value="1.3002" />
+      <inertia
+        ixx="0.0031112"
+        ixy="4.8903E-06"
+        ixz="1.6644E-06"
+        iyy="0.0052714"
+        iyz="3.468E-05"
+        izz="0.0030472" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TSD2/meshes/RL_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0954 -0.272"
+      rpy="0 0 0" />
+    <parent
+      link="RL_calf" />
+    <child
+      link="RL_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.0"
+      upper="0.0"
+      effort="38"
+      velocity="590.0" />
+  </joint>
+</robot>
